@@ -17,8 +17,49 @@ div {
 }
 
 #header {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
     
 }
+
+    #top-left {
+        display: grid;
+        grid-template-columns: 1fr 7fr;
+        align-items: center;
+    }
+
+        #top-left #search-icon {
+            justify-self: end;
+        }
+
+    #top-right {
+        display: grid;
+        grid-template-columns: 2fr 1fr 3fr;
+        align-items: center;
+    }
+
+        #top-right #notification-icon {
+            justify-self: end;
+        }
+
+    #bottom-left {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr 4fr;
+        align-items: center;
+    }
+
+        #bottom-left .user-picture {
+            grid-row: 1/3;
+        }
+
+    #bottom-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
 
 #sidebar {
     grid-row: 1/3;
