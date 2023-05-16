@@ -70,6 +70,13 @@ div {
     font-size: large;
 }
 
+    #sidebar div div, #sidebar #dashboard-heading{
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        align-items: center;
+        column-gap: 5px;
+    }
+
 #main-content {
     
 }
