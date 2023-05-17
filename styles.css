@@ -70,7 +70,7 @@ div {
     font-size: large;
 }
 
-    #sidebar div div, #sidebar #dashboard-heading{
+    #sidebar div div, #sidebar #dashboard-heading {
         display: grid;
         grid-template-columns: 1fr 6fr;
         align-items: center;
@@ -78,5 +78,60 @@ div {
     }
 
 #main-content {
+    display: grid;
+    grid-template-columns: 800px 1fr;
     
 }
+
+    #main-content #your-projects {
+        grid-row: 1/3;
+
+        display: grid;
+        grid-template-rows: 1fr 10fr;
+    }
+
+        #main-content #your-projects #cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 396px);
+        }
+
+            #main-content #your-projects #cards .card {
+                height: 200px;
+                background-color: azure;
+
+                display: grid;
+                grid-template-rows: 3fr 1fr;
+            }
+
+                #main-content #your-projects #cards .card #icons{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    place-items: center;
+                }
+
+    #main-content #announcements #announcements-box{
+        /* align-self: stretch; */
+        
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        height: 300px;
+    }
+
+        #main-content #announcements #announcements-box div p {
+            text-overflow: ellipsis;
+        }
+
+    #main-content #trending #trending-box{
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+        #main-content #trending #trending-box .profile-preview{
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        #main-content #trending #trending-box .profile-preview .user-picture{
+            grid-row: 1/3;
+        }
