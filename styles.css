@@ -4,14 +4,6 @@
     box-sizing: border-box;
 }
 
-.svg {
-    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */ /* the SVGs are all black so this makes them white */
-    filter: invert(100%);
-    width: 25px;
-    height: 25px;
-    justify-self: end;
-}
-
 body{
     font-family: roboto, sans-serif;
     height: 100vh;
@@ -27,7 +19,7 @@ div {
 #header {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     
 }
 
@@ -39,6 +31,18 @@ div {
 
         #top-left #search-icon {
             justify-self: end;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        #top-left #search-bar {
+            border-style: none;
+            background-color: lightgrey;
+            padding: 10px;
+            height: 30px;
+            width: 500px;
+            border-radius: 500px;
         }
 
     #top-right {
@@ -49,6 +53,8 @@ div {
 
         #top-right #notification-icon {
             justify-self: end;
+            width: 30px;
+            height: 30px;
         }
 
     #bottom-left {
@@ -81,7 +87,7 @@ div {
     color: #ffffff;
 }
 
-    #sidebar div div, #sidebar #dashboard-heading { /*lays out the icon next to each heading*/
+    #sidebar div a, #sidebar #dashboard-heading { /*lays out the icon next to each heading*/
         display: grid;
         grid-template-columns: 1fr 6fr;
         align-items: center;
@@ -96,6 +102,19 @@ div {
     #dashboard-icon {
         width: 1.5em;
         height: 1.5em;
+    }
+
+    .sidebar-icons {
+        -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */ /* the SVGs are all black so this makes them white */
+        filter: invert(100%);
+        width: 25px;
+        height: 25px;
+        justify-self: end;
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
     }
 
 #main-content {
