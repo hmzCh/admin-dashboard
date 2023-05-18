@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+.svg {
+    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */ /* the SVGs are all black so this makes them white */
+    filter: invert(100%);
+    width: 25px;
+    height: 25px;
+    justify-self: end;
+}
+
 body{
     font-family: roboto, sans-serif;
     height: 100vh;
@@ -67,14 +75,27 @@ div {
     display: grid;
     grid-template-rows: 1fr 4fr 6fr;
 
-    font-size: large;
+    font-size: 22px;
+    font-weight: bolder;
+    background-color: #2dd4bf;
+    color: #ffffff;
 }
 
-    #sidebar div div, #sidebar #dashboard-heading {
+    #sidebar div div, #sidebar #dashboard-heading { /*lays out the icon next to each heading*/
         display: grid;
         grid-template-columns: 1fr 6fr;
         align-items: center;
-        column-gap: 5px;
+        column-gap: 10px;
+        margin: 20px;
+    }
+
+    #sidebar #dashboard-heading  {
+        font-size: 26px;
+    }
+
+    #dashboard-icon {
+        width: 1.5em;
+        height: 1.5em;
     }
 
 #main-content {
@@ -135,3 +156,7 @@ div {
         #main-content #trending #trending-box .profile-preview .user-picture{
             grid-row: 1/3;
         }
+
+
+
+        
