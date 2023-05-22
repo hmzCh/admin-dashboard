@@ -174,11 +174,7 @@ a {
 
     #sidebar a:hover{
         font-size: 20px;
-    }
-
-#main-content div { /*delete later*/
-    border: grey solid 1px;
-}    
+    } 
 
 #main-content {
     display: grid;
@@ -279,23 +275,44 @@ a {
                 grid-row: 3/4;
             }
 
-    #main-content #announcements #announcements-box{
-        /* align-self: stretch; */
-        
+    #main-content #announcements #announcements-box{      
         display: grid;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        place-items: center;
+        
         height: 300px;
-
-        /* margin-left: 20px; */
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 20px 20px 20px 20px;
+        background-color: white;
+        box-shadow: 0 10px 9px rgba(235, 235, 235, 0.9);
     }
 
+        hr {
+            border-top: solid 1px rgb(235, 235, 235);
+            width: 350px;
+        }
+
+        #main-content #announcements #announcements-box div h5 {
+            margin-bottom: 3px;
+        }
+
         #main-content #announcements #announcements-box div p {
-            text-overflow: ellipsis;
+            font-size: 14px;
+            font-weight: 400;
+            height: auto;
+            color: rgb(80, 80, 80);
+            display: -webkit-box;       /*Bing AI suggested this and assured me it has good support*/
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
     #main-content #trending #trending-box{
         display: grid;
         grid-template-rows: repeat(4, 1fr);
+
+        margin-top: 10px;
     }
 
         #main-content #trending #trending-box .profile-preview{
@@ -307,3 +324,8 @@ a {
         #main-content #trending #trending-box .profile-preview .user-picture{
             grid-row: 1/3;
         }   
+
+
+#main-content div { /*delete later*/
+    /* border: grey solid 1px; */
+}   
