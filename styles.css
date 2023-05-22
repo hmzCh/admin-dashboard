@@ -9,7 +9,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
     background-color: rgb(247, 247, 247);
 }
 
@@ -33,14 +33,14 @@ a {
     display: grid;
     grid-template-columns: 4fr 2fr;
     grid-template-rows: 1fr 2fr;
-    padding: 20px 80px 10px 50px;
+    padding:10px 80px 5px 15px;
     background-color: white;
     box-shadow: 0 10px 9px rgba(235, 235, 235, 0.9);
 }
 
     #top-left {
         display: grid;
-        grid-template-columns: 1fr 11fr;
+        grid-template-columns: 1fr 14fr;
         align-items: center;
     }
 
@@ -84,15 +84,15 @@ a {
     #bottom-left {
         display: grid;
         grid-template-columns: 1fr 4fr;
-        margin-left: -50px;
+        margin-left: -60px;
     }
 
         #bottom-left .user-picture {
             grid-row: 1/3;
             justify-self: end;
             margin-right: 20px;
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             align-self: center;
         }
 
@@ -140,6 +140,7 @@ a {
     font-weight: bolder;
     background-color: #2dd4bf;
     color: #ffffff;
+    /* height: 100vh; */
 }
 
     #sidebar div a, #sidebar #dashboard-heading { /*lays out the icon next to each heading*/
@@ -181,8 +182,9 @@ a {
 
 #main-content {
     display: grid;
-    grid-template-columns: 800px 1fr;
-    padding: 15px;
+    grid-template-columns: 823px 1fr;
+    padding: 25px 30px 5px 30px;
+    column-gap: 20px;
 }
 
     #main-content a {
@@ -204,23 +206,78 @@ a {
 
         #main-content #your-projects #cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, 396px);
+            grid-template-columns: repeat(auto-fit, 400px);
+            align-content: start;    
+            gap: 20px;
+            margin-top: 10px;
+            /* overflow-y: scroll; */
         }
 
             #main-content #your-projects #cards .card {
                 height: 200px;
+                width: 400px;
+                border-radius: 10px;
+                border-left: solid 6px #2dd4bf;
+                padding: 20px 20px 20px 20px;
                 background-color: white;
-                border: solid 1px black; /*delete later*/
+                box-shadow: 0 10px 9px rgba(235, 235, 235, 0.9);
 
                 display: grid;
-                grid-template-rows: 3fr 1fr;
+                grid-template-columns: 4fr repeat(3, auto);
+                grid-template-rows: auto auto 1fr;
+                column-gap: 10px;
             }
 
-                #main-content #your-projects #cards .card #icons{
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    place-items: center;
-                }
+            #main-content #your-projects #cards .card .card-title  {
+                grid-column: 1/5;
+                grid-row: 1/2;
+                align-self: end;
+            }
+
+            #main-content #your-projects #cards .card .card-description {
+                grid-column: 1/5;
+                grid-row: 2/3;
+                justify-self: start;
+
+                margin-top: 5px;
+                font-size: 16px;
+                font-weight: 400;
+                height: auto;
+                color: rgb(80, 80, 80);
+                display: -webkit-box;       /*Bing AI suggested this and assured me it has good support*/
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            #main-content #your-projects #cards .card .icons {
+                width: 25px;
+                height: 25px;
+                justify-self: center;
+                align-self: end;
+            }
+
+            #main-content #your-projects #cards .card .icons:hover {
+                width: 30px;
+                height: 30px;
+                justify-self: center;
+                align-self: end;
+            }
+
+            #like {
+                grid-column: 2/3;
+                grid-row: 3/4;
+            }
+
+            #bookmark {
+                grid-column: 3/4;
+                grid-row: 3/4;
+            }
+
+            #share {
+                grid-column: 4/5;
+                grid-row: 3/4;
+            }
 
     #main-content #announcements #announcements-box{
         /* align-self: stretch; */
@@ -228,6 +285,8 @@ a {
         display: grid;
         grid-template-rows: repeat(3, 1fr);
         height: 300px;
+
+        /* margin-left: 20px; */
     }
 
         #main-content #announcements #announcements-box div p {
@@ -247,8 +306,4 @@ a {
 
         #main-content #trending #trending-box .profile-preview .user-picture{
             grid-row: 1/3;
-        }
-
-
-
-        
+        }   
